@@ -1,6 +1,7 @@
 # import sys
 # sys.path.append('webScan')
-
+from gevent import monkey   # Reference: https://github.com/gevent/gevent/issues/1016
+monkey.patch_all()
 from webScan.web_scan import WebScan 
 from gpt.analyzer import PortScanAnalyzer
 from portScan.port_scan import PortScanner,nmapScanner

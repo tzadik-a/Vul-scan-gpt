@@ -44,7 +44,7 @@ class nmapScanner():
   
      
       # Your code here to perform the nmap scan
-      nm.scan(ip, port, arguments='"-Pn -T4 -sV -sT"')
+      nm.scan(ip, port, arguments="-Pn -T4 -sV -sT")
       json_data = nm.analyse_nmap_xml_scan()
       scan_result = json_data["scan"]
       # logger.info(f"Scanning the network for a given URL:{ip} and port :{port}.")

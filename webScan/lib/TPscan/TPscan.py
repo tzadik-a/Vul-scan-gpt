@@ -1,10 +1,12 @@
 #!/usr/bin/env python
 # coding=utf-8
 from gevent import monkey
-import sys
-sys.path.append('webScan')
-
 monkey.patch_all()
+
+import sys
+sys.path.append('./webScan')
+
+
 from gevent.pool import Pool
 from lib.TPscan.plugins.thinkphp_checkcode_time_sqli import (
     thinkphp_checkcode_time_sqli_verify,
